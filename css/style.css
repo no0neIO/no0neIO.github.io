@@ -18,7 +18,7 @@ body     {
 
 /* styling our header */
 header   {
-  background: #222;
+  background: #000000eb;
   color: #FFF;
   padding: 20px 30px;
   font-size: 16px;
@@ -61,7 +61,7 @@ nav ul li a    {
   display: block;
   padding: 10px 15px;
   border-radius: 3px;
-  transition: 0.3s ease all;
+  transition: 0.7s ease all;
 }
 nav ul li a:hover   {
   background: #444;
@@ -69,7 +69,7 @@ nav ul li a:hover   {
 
 /* styling our footer */
 footer   {
-  background: #222;
+  background: #000000eb;
   color: #777;
   padding: 40px;
   text-align: center;
@@ -83,9 +83,9 @@ footer img   {
 
 /* styling our main content */
 .hero           {
-  min-height: 600px;
+  min-height: 500px;
   text-align: center;
-  background-image: url('../img/main7.jpg');
+  background-image: url('../img/main10.jpg');
   background-size: cover;
 }
 .hero-content   {
@@ -93,11 +93,11 @@ footer img   {
   padding-top: 130px;
 }
 .hero-content h1   {
-  font-size: 80px;
+  font-size: 70px;
   margin: 0;
 }
 .hero-content p    {
-  font-size: 35px;
+  font-size: 25px;
 }
 .hero-content a    {
   display: inline-block;
