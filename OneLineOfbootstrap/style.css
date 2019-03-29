@@ -215,6 +215,10 @@ hr.light-100 {
     font-size: 2.5em;
     padding: 1.2rem;
   }
+
+  .cardi {
+    width: 70%;
+  }
 }
 
 @media (max-width: 576px) {
@@ -241,6 +245,14 @@ hr.light-100 {
     font-size: 2em;
     padding: .7rem;
   }
+
+  .cardi {
+    width: 90%;
+  }
+
+.carousel-indicators{
+  display: none;
+}
 }
 
 /*---Firefox Bug Fix --*/
