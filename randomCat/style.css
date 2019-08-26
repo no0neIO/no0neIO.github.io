@@ -47,6 +47,11 @@ body {
   height: 100%;
 } */
 
+#cata {
+  width: 280px;
+  height: 280px;
+}
+
 @media only screen and (max-width: 500px) {
   .catBut {
     top: 74%;
