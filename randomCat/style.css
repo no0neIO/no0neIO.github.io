@@ -52,6 +52,24 @@ body {
   height: 280px;
 }
 
+.logoCat {
+  position: absolute;
+  top: 74%;
+  left: 14%;
+  height: 200px;
+  width: 200px;
+}
+
+.titleText {
+  position: absolute;
+  text-align: center;
+  font-family: "sofia";
+  color: ghostwhite;
+  font-size: 38px;
+  top: 12%;
+  left: 44%;
+}
+
 @media only screen and (max-width: 500px) {
   .catBut {
     top: 74%;
@@ -63,5 +81,24 @@ body {
     top: 40%;
     margin-left: -140px;
     margin-top: -140px;
+  }
+
+  .logoCat {
+    position: absolute;
+    top: 84%;
+    left: 4%;
+    height: 120px;
+    width: 120px;
+  }
+
+  .titleText {
+    /* position: absolute;
+    text-align: center;
+    font-family: "sofia";
+    color: ghostwhite;
+    font-size: 28px;
+    top: 0%;
+    left: 29%; */
+    display: none;
   }
 }
