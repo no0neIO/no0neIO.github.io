@@ -42,6 +42,10 @@ body {
   margin-top: -28px;
 }
 
+.catBut:hover + .logoCat {
+  transform: rotateY(180deg);
+}
+
 /* .img {
   width: 100%;
   height: 100%;
@@ -58,6 +62,9 @@ body {
   left: 14%;
   height: 200px;
   width: 200px;
+  transition: 0.8s;
+  -webkit-filter: drop-shadow(5px 5px 5px #222);
+  filter: drop-shadow(5px 5px 5px #222);
 }
 
 .titleText {
