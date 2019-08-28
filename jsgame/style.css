@@ -1,4 +1,14 @@
+body {
+  background-image: url(img_02.png);
+}
+
 canvas {
   border: 1px solid #d3d3d3;
-  background-color: #f1f1f1;
+  background-color: #000000;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-color: rgba(130, 243, 243, 0.76);
+  /* transform: rotate(20deg); */
 }

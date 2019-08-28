@@ -1,8 +1,12 @@
 var myGamePiece;
+var myScore;
 
 function startGame() {
-  myGamePiece = new component(30, 30, "red", 10, 120);
-  myObstacle = new component(10, 200, "green", 300, 120);
+  //   myGamePiece = new component(30, 30, "red", 10, 120);
+  //   myObstacle = new component(10, 200, "green", 300, 120);
+  myGamePiece = new component(36, 36, "cat.png", 10, 120, "image");
+  myBackground = new component(1353, 584, "back.jpg", 0, 0, "image");
+  myScore = new component("20px", "Consolas", "white", 320, 20, "text");
   myGameArea.start();
 }
 
@@ -24,7 +28,12 @@ var myGameArea = {
   }
 };
 
-function component(width, height, color, x, y) {
+function component(width, height, color, x, y, type) {
+  this.type = type;
+  if (type == "image") {
+    this.image = new Image();
+    this.image.src = color;
+  }
   this.width = width;
   this.height = height;
   this.x = x;
@@ -33,8 +42,16 @@ function component(width, height, color, x, y) {
   this.speedY = 0;
   this.update = function() {
     ctx = myGameArea.context;
-    ctx.fillStyle = color;
-    ctx.fillRect(this.x, this.y, this.width, this.height);
+    if (this.type == "text") {
+      ctx.font = this.width + " " + this.height;
+      ctx.fillStyle = color;
+      ctx.fillText(this.text, this.x, this.y);
+    } else if (this.type == "image") {
+      ctx.drawImage(this.image, this.x, this.y, this.width, this.height);
+    } else {
+      ctx.fillStyle = color;
+      ctx.fillRect(this.x, this.y, this.width, this.height);
+    }
   };
   this.newPos = function() {
     this.x += this.speedX;
@@ -73,16 +90,30 @@ function updateGameArea() {
     }
   }
   myGameArea.clear();
+  myBackground.newPos();
+  myBackground.update();
   myGameArea.frameNo += 1;
   if (myGameArea.frameNo == 1 || everyInterval(150)) {
     x = myGameArea.canvas.width;
-    y = myGameArea.canvas.height - 200;
-    myObstacles.push(new component(10, 200, "green", x, y));
+    minHeight = 20;
+    maxHeight = 200;
+    height = Math.floor(
+      Math.random() * (maxHeight - minHeight + 1) + minHeight
+    );
+    minGap = 50;
+    maxGap = 200;
+    gap = Math.floor(Math.random() * (maxGap - minGap + 1) + minGap);
+    myObstacles.push(new component(10, height, "green", x, 0));
+    myObstacles.push(
+      new component(10, x - height - gap, "green", x, height + gap)
+    );
   }
   for (i = 0; i < myObstacles.length; i += 1) {
     myObstacles[i].x += -1;
     myObstacles[i].update();
   }
+  myScore.text = "SCORE: " + myGameArea.frameNo;
+  myScore.update();
   myGamePiece.newPos();
   myGamePiece.update();
 }
