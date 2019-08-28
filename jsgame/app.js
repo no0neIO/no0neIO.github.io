@@ -1,10 +1,12 @@
 var myGamePiece;
 var myScore;
+var mySound;
 
 function startGame() {
   //   myGamePiece = new component(30, 30, "red", 10, 120);
   //   myObstacle = new component(10, 200, "green", 300, 120);
   myGamePiece = new component(36, 36, "cat.png", 10, 120, "image");
+  mySound = new sound("dirt.wav");
   myBackground = new component(1353, 584, "back.jpg", 0, 0, "background");
   myScore = new component("20px", "Consolas", "white", 320, 20, "text");
   myGameArea.start();
@@ -99,6 +101,7 @@ function updateGameArea() {
   var x, y;
   for (i = 0; i < myObstacles.length; i += 1) {
     if (myGamePiece.crashWith(myObstacles[i])) {
+      mySound.play();
       myGameArea.stop();
       return;
     }
@@ -151,4 +154,19 @@ function everyInterval(n) {
     return true;
   }
   return false;
+}
+
+function sound(src) {
+  this.sound = document.createElement("audio");
+  this.sound.src = src;
+  this.sound.setAttribute("preload", "auto");
+  this.sound.setAttribute("controls", "none");
+  this.sound.style.display = "none";
+  document.body.appendChild(this.sound);
+  this.play = function() {
+    this.sound.play();
+  };
+  this.stop = function() {
+    this.sound.pause();
+  };
 }
