@@ -5,7 +5,7 @@ function startGame() {
   //   myGamePiece = new component(30, 30, "red", 10, 120);
   //   myObstacle = new component(10, 200, "green", 300, 120);
   myGamePiece = new component(36, 36, "cat.png", 10, 120, "image");
-  myBackground = new component(1353, 584, "back.jpg", 0, 0, "image");
+  myBackground = new component(1353, 584, "back.jpg", 0, 0, "background");
   myScore = new component("20px", "Consolas", "white", 320, 20, "text");
   myGameArea.start();
 }
@@ -30,7 +30,7 @@ var myGameArea = {
 
 function component(width, height, color, x, y, type) {
   this.type = type;
-  if (type == "image") {
+  if (type == "image" || type == "background") {
     this.image = new Image();
     this.image.src = color;
   }
@@ -46,8 +46,17 @@ function component(width, height, color, x, y, type) {
       ctx.font = this.width + " " + this.height;
       ctx.fillStyle = color;
       ctx.fillText(this.text, this.x, this.y);
-    } else if (this.type == "image") {
+    } else if (this.type == "image" || this.type == "background") {
       ctx.drawImage(this.image, this.x, this.y, this.width, this.height);
+      if (type == "background") {
+        ctx.drawImage(
+          this.image,
+          this.x + this.width,
+          this.y,
+          this.width,
+          this.height
+        );
+      }
     } else {
       ctx.fillStyle = color;
       ctx.fillRect(this.x, this.y, this.width, this.height);
@@ -56,6 +65,11 @@ function component(width, height, color, x, y, type) {
   this.newPos = function() {
     this.x += this.speedX;
     this.y += this.speedY;
+    if (this.type == "background") {
+      if (this.x == -this.width) {
+        this.x = 0;
+      }
+    }
   };
   this.crashWith = function(otherobj) {
     var myleft = this.x;
@@ -90,6 +104,7 @@ function updateGameArea() {
     }
   }
   myGameArea.clear();
+  myBackground.speedX = -1;
   myBackground.newPos();
   myBackground.update();
   myGameArea.frameNo += 1;
