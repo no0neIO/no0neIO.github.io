@@ -6,8 +6,9 @@ body {
       rgba(175, 135, 124, 1) 100%
     )
     fixed;
-  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/coc-background.jpg")
-    no-repeat center center fixed;
+  /* background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/coc-background.jpg")
+    no-repeat center center fixed; */
+  background: url("back2.jpg") no-repeat center center fixed;
   background-size: cover;
   margin-top: 30px;
 }
@@ -19,17 +20,18 @@ body {
   /* top: 50%;
   left: 50%;
   transform: translate(-50%, -50%); */
-  background-color: rgba(220, 245, 233, 0.836);
+  background-color: rgba(206, 247, 227, 0.836);
   border-radius: 14px;
   box-sizing: border-box;
   margin: auto;
   text-align: center;
   box-shadow: -1px 15px 30px -12px black;
   margin-top: 100px;
+  border-color: rgb(255, 0, 0);
 }
 
 .card:hover {
-  background-color: rgba(186, 221, 204, 0.836);
+  background-color: rgba(176, 202, 189, 0.836);
   box-shadow: 5px 15px 40px -12px black;
 }
 
