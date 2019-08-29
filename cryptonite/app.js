@@ -7,7 +7,7 @@ url2 =
   apiKey;
 
 function refreshPrice() {
-  this.timer = setInterval(() => this.getPrice(), 100);
+  this.timer = setInterval(() => this.getPrice(), 500);
 }
 
 btcStatus = document.getElementById("btcusd");
