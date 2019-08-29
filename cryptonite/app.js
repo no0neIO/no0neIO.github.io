@@ -1,10 +1,20 @@
-url = "https://min-api.cryptocompare.com/data/price?fsym=BTC&tsyms=USD";
+apiKey = "c848ca0a7a5422a691f26d85cafa5be8ce08ebf4d33a2ba6d929507ad0e5de69";
+url =
+  "https://min-api.cryptocompare.com/data/price?fsym=BTC&tsyms=USD&api_key=" +
+  apiKey;
 url2 =
-  "https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC,ETH&tsyms=USD";
+  "https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC,ETH&tsyms=USD&api_key=" +
+  apiKey;
 
 function refreshPrice() {
-  this.timer = setInterval(() => this.getPrice(), 500);
+  this.timer = setInterval(() => this.getPrice(), 100);
 }
+
+btcStatus = document.getElementById("btcusd");
+ethStatus = document.getElementById("ethusd");
+
+oldbtcusdprice = 0;
+oldethusdprice = 0;
 
 function getPrice() {
   fetch(url2)
@@ -12,9 +22,38 @@ function getPrice() {
     .then(function(data) {
       let btcusdprice = data.BTC.USD;
       let ethusdprice = data.ETH.USD;
-      document.getElementById("btcusd").innerText = btcusdprice;
-      document.getElementById("ethusd").innerText = ethusdprice;
+      if (btcusdprice > oldbtcusdprice) {
+        btcStatus.setAttribute("style", "color:green;");
+        setTimeout(function() {
+          btcStatus.setAttribute("style", "color:black;");
+        }, 1500);
+        console.log("UP!");
+      } else if (btcusdprice < oldbtcusdprice) {
+        btcStatus.setAttribute("style", "color:red;");
+        setTimeout(function() {
+          btcStatus.setAttribute("style", "color:black;");
+        }, 1500);
+        console.log("DOWN!");
+      }
+
+      if (ethusdprice > oldethusdprice) {
+        ethStatus.setAttribute("style", "color:green;");
+        console.log("UP!");
+        setTimeout(function() {
+          ethStatus.setAttribute("style", "color:black;");
+        }, 1500);
+      } else if (ethusdprice < oldethusdprice) {
+        ethStatus.setAttribute("style", "color:red;");
+        setTimeout(function() {
+          ethStatus.setAttribute("style", "color:black;");
+        }, 1500);
+        console.log("DOWN!");
+      }
+      btcStatus.innerText = btcusdprice;
+      ethStatus.innerText = ethusdprice;
       console.log(btcusdprice);
       console.log(ethusdprice);
+      oldbtcusdprice = btcusdprice;
+      oldethusdprice = ethusdprice;
     });
 }
