@@ -22,23 +22,22 @@ function getPrice() {
     .then(function(data) {
       let btcusdprice = data.BTC.USD;
       let ethusdprice = data.ETH.USD;
+      btcStatus.innerText = btcusdprice;
+      ethStatus.innerText = ethusdprice;
       if (btcusdprice > oldbtcusdprice) {
         btcStatus.setAttribute("style", "color:green;");
         setTimeout(function() {
           btcStatus.setAttribute("style", "color:black;");
         }, 1500);
-        console.log("UP!");
       } else if (btcusdprice < oldbtcusdprice) {
         btcStatus.setAttribute("style", "color:red;");
         setTimeout(function() {
           btcStatus.setAttribute("style", "color:black;");
         }, 1500);
-        console.log("DOWN!");
       }
 
       if (ethusdprice > oldethusdprice) {
         ethStatus.setAttribute("style", "color:green;");
-        console.log("UP!");
         setTimeout(function() {
           ethStatus.setAttribute("style", "color:black;");
         }, 1500);
@@ -47,12 +46,7 @@ function getPrice() {
         setTimeout(function() {
           ethStatus.setAttribute("style", "color:black;");
         }, 1500);
-        console.log("DOWN!");
       }
-      btcStatus.innerText = btcusdprice;
-      ethStatus.innerText = ethusdprice;
-      console.log(btcusdprice);
-      console.log(ethusdprice);
       oldbtcusdprice = btcusdprice;
       oldethusdprice = ethusdprice;
     });
