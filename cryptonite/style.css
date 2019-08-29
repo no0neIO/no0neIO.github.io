@@ -7,7 +7,7 @@ body {
     )
     fixed;
   /* background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/coc-background.jpg")
-    no-repeat center center fixed; */
+      no-repeat center center fixed; */
   background: url("back2.jpg") no-repeat center center fixed;
   background-size: cover;
   margin-top: 30px;
@@ -16,10 +16,10 @@ body {
 .card {
   height: 250px;
   width: 350px;
-  position: relative;
+  /* position: relative; */
   /* top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); */
+    left: 50%;
+    transform: translate(-50%, -50%); */
   background-color: rgba(206, 247, 227, 0.836);
   border-radius: 14px;
   box-sizing: border-box;
@@ -53,4 +53,18 @@ body {
 
 #ethusd {
   transition: 500ms;
+}
+
+#btc {
+  position: absolute;
+  top: 30%;
+  left: 33%;
+  transform: translate(-35%, -30%);
+}
+
+#eth {
+  position: absolute;
+  top: 30%;
+  left: 64%;
+  transform: translate(-65%, -30%);
 }
