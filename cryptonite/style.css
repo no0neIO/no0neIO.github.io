@@ -28,11 +28,14 @@ body {
   box-shadow: -1px 15px 30px -12px black;
   margin-top: 100px;
   border-color: rgb(255, 0, 0);
+  transition: 300ms;
 }
 
 .card:hover {
   background-color: rgba(176, 202, 189, 0.836);
   box-shadow: 5px 15px 40px -12px black;
+  height: 275px;
+  width: 385px;
 }
 
 .one-third {
