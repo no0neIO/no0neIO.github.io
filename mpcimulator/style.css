@@ -14,6 +14,7 @@
   padding-right: 390px;
   padding-bottom: 120px; */
   grid-gap: 10px;
+  /* border: 5px solid #000; */
 }
 
 .pads {
@@ -38,4 +39,11 @@
 
 h1 {
   text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .pads {
+    width: 70px;
+    height: 70px;
+  }
 }
