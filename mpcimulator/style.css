@@ -29,6 +29,7 @@
   align-items: flex-end;
   background-color: rgb(53, 54, 54);
   color: white;
+  transition: 0.3s;
 }
 
 .pads:hover {
