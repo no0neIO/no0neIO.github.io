@@ -22,7 +22,7 @@
   width: 150px;
   height: 150px;
   /* padding: 10px; */
-  border: 2px solid rgb(155, 150, 150);
+  border: 2px solid rgb(170, 170, 170);
   border-radius: 18px;
   /* box-shadow: -1px -1px 1px 1px beige; */
   font-size: 11px;
@@ -30,11 +30,18 @@
   align-items: flex-end;
   background-color: rgb(53, 54, 54);
   color: white;
-  transition: 0.3s;
+  /* transition: 0.3s; */
+  box-shadow: 0 6px rgb(80, 80, 80);
 }
 
 .pads:hover {
-  background-color: rgb(162, 175, 175);
+  background-color: rgba(53, 54, 54, 0.7);
+}
+
+.pads:active {
+  background-color: rgba(53, 54, 54, 0.1);
+  box-shadow: 0 3px #666;
+  transform: translateY(3px);
 }
 
 h1 {
