@@ -49,3 +49,13 @@ kbd {
   letter-spacing: 0.1rem;
   color: #ffc600;
 }
+
+.menu-home a {
+  position: absolute;
+  text-decoration: none;
+  color: white;
+  padding: 100px;
+  font-family: monospace;
+  font-size: 2em;
+  font-weight: 500;
+}
