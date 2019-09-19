@@ -1,0 +1,34 @@
+.input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+input {
+    border-radius: 14px;
+}
+
+h1 {
+    text-align: center;
+    font-family: monospace;
+}
+
+#btn {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-family: monospace;
+    font-size: 2em;
+
+}
+
+.container {
+    background-color: rgba(37, 142, 240, 0.774);
+    border: 3px solid rgb(247, 208, 150);
+    border-radius: 15px;
+    color: azure;
+}
