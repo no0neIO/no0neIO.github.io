@@ -1,3 +1,9 @@
+sounds = ['sounds/kick2.wav', 'sounds/Perc2.wav', 'sounds/Snare1.wav', 'sounds/kick3.wav',
+  'sounds/Brash_Shaker.wav', 'sounds/Brutal_Hi_Hat.wav', 'sounds/Mafio_Snare.wav', 'sounds/kick.wav',
+  'sounds/boom.wav', 'sounds/snare.wav', 'sounds/hihat.wav', 'sounds/clap.wav',
+  'sounds/tom.wav', 'sounds/tink.wav', 'sounds/openhat.wav', 'sounds/ride.wav'
+];
+
 function mpc() {
   addGrid();
   addPads();
@@ -16,16 +22,19 @@ addPads = () => {
     pad.className = "pads";
     pad.innerText = `PAD - ${i}`;
     pad[i] = document.getElementsByClassName("grid-16")[0].appendChild(pad);
-    document.getElementById("pad" + i).addEventListener("click", ps);
+    document.getElementById("pad" + i).addEventListener("mousedown", ps);
     console.log("DONE");
     console.log(pad.id);
   }
 };
 
-ps = () => {
-  var audio = new Audio(
-    "https://freesound.org/data/previews/410/410514_5121236-lq.mp3"
-  );
-  audio.play();
-  console.log("BEEP");
+ps = (j) => {
+  const str = j.srcElement.id;
+  console.log(str);
+  for (let i = 0; i < 16; i++)
+    if (str === `pad${i}`) {
+      const audio = new Audio(sounds[i]);
+      audio.currentTime = 0;
+      audio.play();
+    }
 };
