@@ -1,4 +1,4 @@
-sounds = ['sounds/kick2.wav', 'sounds/Perc2.wav', 'sounds/Snare1.wav', 'sounds/kick3.wav',
+sounds = ['sounds/Kick2.wav', 'sounds/Perc2.wav', 'sounds/Snare1.wav', 'sounds/Kick3.wav',
   'sounds/Brash_Shaker.wav', 'sounds/Brutal_Hi_Hat.wav', 'sounds/Mafio_Snare.wav', 'sounds/kick.wav',
   'sounds/boom.wav', 'sounds/snare.wav', 'sounds/hihat.wav', 'sounds/clap.wav',
   'sounds/tom.wav', 'sounds/tink.wav', 'sounds/openhat.wav', 'sounds/ride.wav'
