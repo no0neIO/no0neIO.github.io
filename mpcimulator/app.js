@@ -31,10 +31,15 @@ addPads = () => {
 ps = (j) => {
   const str = j.srcElement.id;
   console.log(str);
-  for (let i = 0; i < 16; i++)
+  for (let i = 0; i < 16; i++) {
     if (str === `pad${i}`) {
-      const audio = new Audio(sounds[i]);
+      const audio = document.querySelector(`audio[class="${str}"]`);
+      console.log(audio);
       audio.currentTime = 0;
       audio.play();
+      // const audio = new Audio(sounds[i]);
+      // audio.currentTime = 0;
+      // audio.play();
     }
+  }
 };
