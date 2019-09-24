@@ -19,6 +19,7 @@ function getPhoto() {
   document.getElementById("url").value = "";
 }
 
+//
 // function getPhoto() {
 //   let url = document.getElementById("url").value;
 //   url += "?__a=1";
