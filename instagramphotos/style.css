@@ -33,3 +33,34 @@ h1 {
     color: azure;
     margin-bottom: 50px;
 }
+
+.grid12 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /* grid-gap: 10px; */
+    margin: auto;
+    width: 800px;
+
+}
+
+.grid-item {
+    width: 180px;
+    height: 180px;
+
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+}
+
+/* #profImg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    /* width: 50%; */
+} */
+
+#dl {
+    text-align: center;
+}

@@ -3,6 +3,7 @@ document.getElementById("btn").addEventListener("click", getPhoto);
 function getPhoto() {
   let url = document.getElementById("url").value;
   url += "?__a=1";
+  i = 0;
   fetch(url)
     .then(resp => resp.json())
     .then(function(data) {
@@ -10,6 +11,7 @@ function getPhoto() {
       let res = data.graphql.user.edge_owner_to_timeline_media.edges;
       res.forEach(element => {
         console.log(element.node.display_url);
+        document.getElementById(`gd${i++}`).src = element.node.display_url;
       });
       console.log(res);
       document.getElementById("dl").innerText = "DOWNLOAD NOW!";
