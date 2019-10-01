@@ -16,7 +16,6 @@ function getPhoto() {
         i++;
       });
       console.log(res);
-      document.getElementById("dl").innerText = "DOWNLOAD NOW!";
       document.getElementById("dl").href = profilePicHD;
       document.getElementById("profImg").src = profilePicHD;
     });
