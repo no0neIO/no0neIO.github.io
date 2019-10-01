@@ -1,3 +1,7 @@
+body {
+    background-color: rgba(38, 43, 43, 0.76);
+}
+
 .input {
     display: flex;
     justify-content: center;
@@ -27,6 +31,7 @@ h1 {
 
 #profImg {
     border-radius: 50%;
+    border: 3px double rgb(31, 35, 39)
 }
 
 .container {
