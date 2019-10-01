@@ -11,7 +11,9 @@ function getPhoto() {
       let res = data.graphql.user.edge_owner_to_timeline_media.edges;
       res.forEach(element => {
         console.log(element.node.display_url);
-        document.getElementById(`gd${i++}`).src = element.node.display_url;
+        document.getElementById(`gd${i}`).src = element.node.display_url;
+        // document.getElementById(`l${i}`).href = element.node.display_url;
+        i++;
       });
       console.log(res);
       document.getElementById("dl").innerText = "DOWNLOAD NOW!";
@@ -20,6 +22,28 @@ function getPhoto() {
     });
   document.getElementById("url").value = "";
 }
+
+// Lightbox Modal
+
+const lightbox = document.createElement("div");
+lightbox.id = "lightbox";
+document.body.appendChild(lightbox);
+
+const images = document.querySelectorAll(".grid12 img");
+images.forEach(image => {
+  image.addEventListener("click", e => {
+    lightbox.classList.add("active");
+    const img = document.createElement("img");
+    img.src = image.src;
+    lightbox.appendChild(img);
+  });
+});
+
+lightbox.addEventListener("click", e => {
+  if (e.target !== e.currentTarget) return;
+  lightbox.classList.remove("active");
+  lightbox.innerHTML = "";
+});
 
 //
 // function getPhoto() {
