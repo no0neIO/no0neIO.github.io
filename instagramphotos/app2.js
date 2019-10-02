@@ -3,7 +3,7 @@ document.getElementById("btn").addEventListener("click", getPhoto);
 function getPhoto() {
     let url = document.getElementById("url").value;
     url += "?__a=1";
-    i = 0;
+    let i = 0;
     fetch(url)
         .then(resp => resp.json())
         .then(function (data) {
@@ -11,8 +11,10 @@ function getPhoto() {
             let res = data.graphql.user.edge_owner_to_timeline_media.edges;
             res.forEach(element => {
                 console.log(element.node.display_url);
-                document.getElementById(`gd${i}`).src = element.node.display_url;
-                // document.getElementById(`l${i}`).href = element.node.display_url;
+                document.getElementById(`gd${i}`).src = element.node.thumbnail_src;
+                let imgLink = element.node.shortcode;
+                imgLink = "https://www.instagram.com/p/" + imgLink;
+                document.getElementById(`l${i}`).href = imgLink;
                 i++;
             });
             console.log(res);
@@ -24,25 +26,6 @@ function getPhoto() {
 
 // Lightbox Modal
 
-const lightbox = document.createElement("div");
-lightbox.id = "lightbox";
-document.body.appendChild(lightbox);
-
-const images = document.querySelectorAll(".grid12 img");
-images.forEach(image => {
-    image.addEventListener("click", e => {
-        lightbox.classList.add("active");
-        const img = document.createElement("img");
-        img.src = image.src;
-        lightbox.appendChild(img);
-    });
-});
-
-lightbox.addEventListener("click", e => {
-    if (e.target !== e.currentTarget) return;
-    lightbox.classList.remove("active");
-    lightbox.innerHTML = "";
-});
 
 //
 // function getPhoto() {
