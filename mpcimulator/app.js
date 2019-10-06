@@ -43,3 +43,10 @@ ps = (j) => {
     }
   }
 };
+
+pinkPads = document.getElementById("pink");
+pinkPads.addEventListener("click", ch=(e)=>{
+  x=document.getElementsByClassName("pads");
+  for(i=0;i<16;i++)
+    x[i].classList.add('padsPink');
+})

@@ -34,14 +34,28 @@
   box-shadow: 0 6px rgb(80, 80, 80);
 }
 
+.padsPink{
+  background-color: palevioletred;
+  border-color: oldlace;
+  box-shadow: 0 6px rgb(167, 88, 137);
+}
+
 .pads:hover {
-  background-color: rgba(53, 54, 54, 0.7);
+  background-color: rgba(53, 54, 54, 0.3);
+}
+
+.padsPink:hover{
+  background-color: rgb(229, 192, 204);
 }
 
 .pads:active {
   background-color: rgba(53, 54, 54, 0.1);
   box-shadow: 0 3px #666;
   transform: translateY(3px);
+}
+
+.padsPink:active{
+  background-color: rgb(255, 255, 255);
 }
 
 h1 {
@@ -53,4 +67,48 @@ h1 {
     width: 70px;
     height: 70px;
   }
+}
+
+#mySidenav {
+  position: absolute;
+  left:0px;
+  transition:0.3s;
+  padding: 10px;
+  width: 80px;
+  height: 50px;
+  text-decoration: none;
+  font-size: 20px;
+  color:white;
+  border-radius: 0 14px 5px 0;
+  top:160px;
+  background-color:rgb(53, 54, 54);
+  border:2px solid rgb(170, 170, 170);
+}
+
+h4{
+  background-color:rgb(53, 54, 54);
+}
+
+#mySidenav:hover{
+  left:0;
+  height: 180px;
+}
+
+#mySidenav:hover .changeCol, #mySidenav:hover .pink{
+  display: block;
+}
+
+.changeCol{
+  background-color:rgb(53, 54, 54);
+  display:none;
+  transition:0.5s;
+}
+
+.pink{
+  display:none;
+  text-decoration: none;
+  background-color:rgb(53, 54, 54);
+  color: pink;
+  cursor: pointer;
+  transition:0.5s;
 }
