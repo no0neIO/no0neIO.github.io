@@ -47,6 +47,18 @@ ps = (j) => {
 pinkPads = document.getElementById("pink");
 pinkPads.addEventListener("click", ch=(e)=>{
   x=document.getElementsByClassName("pads");
-  for(i=0;i<16;i++)
+  x.className=''; 
+  for(i=0;i<16;i++){
+    x[i].classList.remove('padsWhatever');
     x[i].classList.add('padsPink');
+  }
+})
+
+pinkPads = document.getElementById("whatever");
+pinkPads.addEventListener("click", ch=(e)=>{
+  x=document.getElementsByClassName("pads");
+  for(i=0;i<16;i++){ 
+    x[i].classList.remove('padsPink');
+    x[i].classList.add('padsWhatever');
+  }
 })

@@ -37,7 +37,13 @@
 .padsPink{
   background-color: palevioletred;
   border-color: oldlace;
-  box-shadow: 0 6px rgb(167, 88, 137);
+  box-shadow: 0 4px rgba(255, 255, 255, 0.356);
+}
+
+.padsWhatever{
+  background-color: rgb(51, 74, 90);
+  border-color: rgb(197, 147, 53);
+  box-shadow: 0 4px rgba(85, 31, 31, 0.356);
 }
 
 .pads:hover {
@@ -45,7 +51,11 @@
 }
 
 .padsPink:hover{
-  background-color: rgb(229, 192, 204);
+  background-color: rgb(41, 37, 38);
+}
+
+.padsWhatever:hover{
+  background-color: rgba(22, 18, 27, 0.411);
 }
 
 .pads:active {
@@ -74,8 +84,8 @@ h1 {
   left:0px;
   transition:0.3s;
   padding: 10px;
-  width: 80px;
-  height: 50px;
+  width: 10px;
+  height: 70px;
   text-decoration: none;
   font-size: 20px;
   color:white;
@@ -83,18 +93,43 @@ h1 {
   top:160px;
   background-color:rgb(53, 54, 54);
   border:2px solid rgb(170, 170, 170);
+  overflow: hidden;
 }
 
 h4{
   background-color:rgb(53, 54, 54);
+  writing-mode: vertical-rl;
+  margin-left: -10px;
+  padding-bottom: 20px;
+  letter-spacing: 1px;
 }
 
 #mySidenav:hover{
   left:0;
   height: 180px;
+  width: 140px;
+  box-shadow: 0 0 5px white;
 }
 
-#mySidenav:hover .changeCol, #mySidenav:hover .pink{
+#mySidenav:hover h4{
+  writing-mode: horizontal-tb;
+  text-align: center;
+  margin-top:-5px;
+}
+
+#mySidenav:hover h4::after{
+  margin-top: 5px;
+  content: '';
+  position: absolute;
+  width: 100vw;
+  height: 1px;
+  left: 0;
+  display: block;
+  clear: both;
+  background-color: white;
+}
+
+#mySidenav:hover .changeCol, #mySidenav:hover .pink, #mySidenav:hover .whatever{
   display: block;
 }
 
@@ -102,6 +137,9 @@ h4{
   background-color:rgb(53, 54, 54);
   display:none;
   transition:0.5s;
+  font-size: 13px;
+  text-align: center;
+  margin-top:-29px;
 }
 
 .pink{
@@ -111,4 +149,17 @@ h4{
   color: pink;
   cursor: pointer;
   transition:0.5s;
+  font-size: 11px;
+  text-align: center;
+}
+
+.whatever{
+  display:none;
+  text-decoration: none;
+  background-color:rgb(53, 54, 54);
+  color: rgb(192, 209, 255);
+  cursor: pointer;
+  transition:0.5s;
+  font-size: 11px;
+  text-align: center;
 }
