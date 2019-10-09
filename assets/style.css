@@ -1,7 +1,9 @@
-* {
-    /* background-color: #ededed; */
+/* * {
+    background-color: #ededed;
 
 }
+
+*/
 
 html,
 body {
@@ -11,7 +13,6 @@ body {
     overflow-x: hidden;
     scroll-behavior: smooth;
     background-image: -webkit-linear-gradient(top, #FCFEFF 0%, rgb(189, 213, 223) 200%);
-
 }
 
 .logo {
@@ -140,6 +141,11 @@ h2 {
     background-color: rgb(98, 63, 152);
 } */
 
+.item-1 img {
+    height: 210px;
+    width: 210px;
+}
+
 .item-2 img {
     height: 200px;
     width: 200px;
@@ -182,4 +188,33 @@ h2 {
     transition: 0.3s ease-out;
     transform: scale(1.20, 1.20);
     filter: drop-shadow(9px 9px 1px rgba(0, 0, 0, 0.5));
+}
+
+.container {
+    padding-top: 80px;
+}
+
+.main-menu {
+    transition: 0.4s;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgb(0, 0, 0);
+    color: whitesmoke !important;
+    z-index: 5;
+    transition: 0.4s;
+    box-shadow: 0 0 5px black;
+    /* border-radius: 190px 190px 10px 10px; */
+    /* border: 2px solid black; */
+}
+
+.sticky a {
+    color: white !important;
+}
+
+.sticky+.container {
+    padding-top: 160px;
 }
