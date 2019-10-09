@@ -191,7 +191,7 @@ h2 {
 }
 
 .container {
-    padding-top: 80px;
+    padding-top: 20px;
 }
 
 .main-menu {
@@ -216,5 +216,5 @@ h2 {
 }
 
 .sticky+.container {
-    padding-top: 160px;
+    padding-top: 120px;
 }
