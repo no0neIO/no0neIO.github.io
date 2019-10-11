@@ -271,3 +271,47 @@ body {
     transform: rotate(-6deg);
     transform-origin: 0;
 }
+
+@media only screen and (max-width: 375px) {
+    .projects {
+        grid-template-columns: 1fr;
+    }
+
+    .project-item {
+        position: relative;
+        /* height: 200px;width: 125px !important; */
+        position: relative;
+    }
+
+    #desk-lamp {
+        left: 72%;
+        top: 2.4%;
+        height: 137px;
+        width: 88px;
+    }
+
+    #lol {
+        left: 86%;
+    }
+
+    #lol1 {
+        left: 48%;
+        top: 2.75%;
+    }
+
+    #lol2 {
+        top: 5.2%;
+        left: 66%;
+    }
+
+    .project-item .item-title {
+        left: 79%;
+        top: 42%;
+        font-size: 1.4em;
+    }
+
+    .menu-links {
+        width: 90%;
+        font-size: 11px;
+    }
+}
