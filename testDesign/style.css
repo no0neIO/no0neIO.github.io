@@ -284,10 +284,11 @@ body {
     }
 
     #desk-lamp {
-        left: 72%;
-        top: 2.4%;
-        height: 137px;
-        width: 88px;
+        left: -5%;
+        top: -1.6%;
+        height: 206px;
+        width: 141px;
+        transform: rotate(90deg);
     }
 
     #lol {
