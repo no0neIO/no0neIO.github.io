@@ -1,0 +1,79 @@
+.prism {
+    border-radius: var(--border-radius, 100em);
+    background: var(--bg);
+    color: var(--fg);
+    border: 2px solid #333;
+    position: relative;
+    --intensity: 1;
+    --scaleFactor: 1.01;
+    --blur: 5;
+    --redTop: 0;
+    --redLeft: 0;
+    --greenTop: 0;
+    --greenLeft: 0;
+    --blueTop: 0;
+    --blueLeft: 0;
+
+    &>.red,
+    &>.green,
+    &>.blue {
+        position: absolute;
+        width: calc(var(--scaleFactor) * 100%);
+        height: calc(var(--scaleFactor) * 100%);
+        z-index: -1;
+        border-radius: inherit;
+        filter: blur(calc(var(--blur) * 1px));
+        mix-blend-mode: screen;
+        opacity: var(--intensity);
+    }
+
+    &>.red {
+        top: calc(var(--redTop) * 1px);
+        left: calc(var(--redLeft) * 1px);
+        background: rgb(255, 0, 0);
+    }
+
+    &>.green {
+        top: calc(var(--greenTop) * 1px);
+        left: calc(var(--greenLeft) * 1px);
+        background: rgb(0, 255, 0);
+    }
+
+    &>.blue {
+        top: calc(var(--blueTop) * 1px);
+        left: calc(var(--blueLeft) * 1px);
+        background: rgb(0, 0, 255);
+    }
+}
+
+button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    padding: 1em 2em;
+    font-weight: bolder;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &+button {
+        margin-left: 1em;
+    }
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg);
+}
+
+:root {
+    --bg: #222;
+    --fg: #fff;
+    --border-radius: 9em;
+    font-size: 30px;
+}

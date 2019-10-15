@@ -12,16 +12,19 @@
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="style.css" />
+    
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Black+Ops+One&display=swap" rel="stylesheet">
   </head>
   <body>
       <div class="header">
           <div class="logo">
-            <img
-              src="./assets/img/onelineoflogo.png"
+            <a href="https://onelineof.me/"> <img
+              src="./assets/img/onelineoflogo10.png"
               alt="One Line of Me Logo"
               srcset=""
-            />
+            /> </a>
+            <div id="customtext"></div>
           </div>
         </div>
         <hr id="header-hr" />
@@ -29,17 +32,62 @@
           <div class="menu-links">
             <div class="home"><a href="https://onelineof.me/">Home</a></div>
             <div class="proj"><a href="#desk-lamp">Projects</a></div>
-            <div class="work-xp"><a href="#">Work</a></div>
+            <div class="work-xp"><a href="#container">Work</a></div>
             <div class="contact"><a href="#">Contact</a></div>
           </div>
         </div>
     <!-- <div class="main-desk"> -->
+    <!-- <button class="prism">Click Me</button> -->
+    <div id="container" class="container">
+        <div class="card">
+            <div class="face face1">
+                <div class="content">
+                    <img src="https://github.com/Jhonierpc/WebDevelopment/blob/master/CSS%20Card%20Hover%20Effects/img/design_128.png?raw=true">
+                    <h3>Front End</h3>
+                </div>
+            </div>
+            <div class="face face2">
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cum cumque minus iste veritatis provident at.</p>
+                        <a href="#">Read More</a>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="face face1">
+                <div class="content">
+                    <img src="https://github.com/Jhonierpc/WebDevelopment/blob/master/CSS%20Card%20Hover%20Effects/img/code_128.png?raw=true">
+                    <h3>Back End</h3>
+                </div>
+            </div>
+            <div class="face face2">
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cum cumque minus iste veritatis provident at.</p>
+                        <a href="#">Read More</a>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="face face1">
+                <div class="content">
+                    <img src="https://github.com/Jhonierpc/WebDevelopment/blob/master/CSS%20Card%20Hover%20Effects/img/launch_128.png?raw=true">
+                    <h3>Whatever</h3>
+                </div>
+            </div>
+            <div class="face face2">
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cum cumque minus iste veritatis provident at.</p>
+                        <a href="#">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="test">
       <img id="desk-lamp" src="desk.png" alt="desk light" srcset="" />
-      <hr id="lol">
+      <!-- <hr id="lol">
       <hr id="lol1">
-      <hr id="lol2">
-      <div id="wall"></div>
+      <hr id="lol2"> -->
+      <!-- <div id="wall"></div> -->
       <h2 class="text-center">Projects</h2>
     <div class="projects" id="projects">
             <div class="project-item item-0">
@@ -66,8 +114,8 @@
                 <img src="./assets/img/drumit.png" alt="Drum Kit" srcset="">
                 <div class="item-title">Drum it!</div>
             </div>
-            <div class="project-item item-6">Random</div>
-            <div class="project-item item-7">More</div>
+            <!-- <div class="project-item item-6">Random</div>
+            <div class="project-item item-7">More</div> -->
     </div>
     </div>
     <script src="app.js" async defer></script>

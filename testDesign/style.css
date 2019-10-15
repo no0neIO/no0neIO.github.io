@@ -3,13 +3,26 @@ body {
     padding: 0;
     margin: 0;
     scroll-behavior: smooth;
-    /* overflow: hidden; */
+    background: #333;
 }
 
 .logo {
     text-align: center;
-    padding-top: 30px;
+    padding-top: 15px;
     padding-bottom: 5px;
+    /* height: 100px;
+width: 100px; */
+}
+
+.logo img {
+    height: 150px;
+    width: 150px;
+
+}
+
+.logoNight img {
+    filter: brightness(0.25);
+
 }
 
 #header-hr {
@@ -20,7 +33,7 @@ body {
 
 .menu-links {
     padding-top: 15px;
-    padding-bottom: 30px;
+    padding-bottom: 100px;
     display: grid;
     width: 36%;
     margin: auto;
@@ -30,18 +43,25 @@ body {
 
 .menu-links a {
     text-decoration: none;
-    color: black;
+    color: rgb(255, 255, 255);
     text-transform: uppercase;
     font-family: monospace;
-    font-size: 1.3em;
+    font-size: 0.9em;
     font-weight: 400;
     letter-spacing: 1px;
     transition: 0.18s ease-in;
+    /* font-family: 'Black Ops One', cursive; */
+    /* font-family: consolas; */
+    font-family: 'Black Ops One', cursive;
+
+
 }
 
 .menu-links a:hover {
-    color: rgba(0, 0, 0, 0.4);
+    /* color: rgba(0, 0, 0, 0.4); */
+    color: #a6b2b7;
     transition: 0.18s ease-in;
+
 }
 
 
@@ -84,7 +104,7 @@ body {
 
 .projects {
     display: grid;
-    /* width: 70%; */
+    width: 70%;
     grid-template-columns: repeat(3, 1fr);
     text-align: center;
     margin: auto;
@@ -315,4 +335,162 @@ body {
         width: 90%;
         font-size: 11px;
     }
+}
+
+/* test */
+
+/* body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: consolas;
+} */
+
+
+/* CARDS */
+
+
+/* test gia ta projects grid DES */
+
+/* .container {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: consolas;
+} */
+
+
+/* body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: consolas;
+} */
+
+.container {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    font-family: consolas;
+    /* align-item  */
+}
+
+.container .card {
+    position: relative;
+    cursor: pointer;
+    padding-right: 30px;
+}
+
+.container .card .face {
+    width: 300px;
+    height: 200px;
+    transition: 0.5s;
+}
+
+
+.container .card .face.face1 {
+    position: relative;
+    background: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(100px);
+}
+
+.container .card:hover .face.face1 {
+    background: #888082;
+    transform: translateY(0);
+}
+
+
+.container .card .face.face1 .content {
+    opacity: 0.5;
+    transition: 0.5s;
+}
+
+.container .card:hover .face.face1 .content {
+    opacity: 1;
+}
+
+.container .card .face.face1 .content img {
+    max-width: 100px;
+}
+
+.container .card .face.face1 .content h3 {
+    margin: 10px 0 0;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.container .card .face.face2 {
+    position: relative;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+    transform: translateY(-100px);
+}
+
+.container .card:hover .face.face2 {
+    transform: translateY(0);
+}
+
+.container .card .face.face2 .content p {
+    margin: 0;
+    padding: 0;
+}
+
+.container .card .face.face2 .content a {
+    margin: 15px 0 0;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 900;
+    color: #333;
+    padding: 5px;
+    border: 1px solid #333;
+}
+
+.container .card .face.face2 .content a:hover {
+    background: #333;
+    color: #fff;
+}
+
+div#customtext {
+    background: #ffffff00;
+    height: 10px;
+    width: 70px;
+    text-align: center;
+    /* align-self: center; */
+    /* align-items: center; */
+    /* display: flex; */
+    /* justify-content: center; */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 17.4%;
+    color: white;
+    font-size: 0.7em;
+    letter-spacing: 1px;
+    font-family: consolas;
 }
