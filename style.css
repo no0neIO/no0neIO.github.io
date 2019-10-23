@@ -153,17 +153,12 @@ width: 100px; */
     transition: 0.3s ease-out;
 }
 
-.project-item .item-title {
-    position: absolute;
-    left: 65%;
-    top: 45%;
-}
 
 .project-item img {
     position: absolute;
-    left: 25%;
+    left: 50%;
     /* top: 10%; */
-    /* transform: translateX(-50%); */
+    transform: translateX(-50%);
     transition: 0.3s ease-out;
     /* align-items: flex-start; */
     justify-content: center;
@@ -244,9 +239,9 @@ width: 100px; */
 .item-title {
     position: absolute;
     left: 50% !important;
-    top: 80% !important;
+    top: 84% !important;
     transform: translateX(-50%);
-    font-size: 1.3rem;
+    font-size: 1em;
     text-transform: uppercase;
     line-height: 1 !important;
     background-color: transparent !important;
@@ -260,98 +255,24 @@ width: 100px; */
 
 
 .project-item:hover>img {
+    left:25%;
+    transform: translateX(-50%);
     transition: 0.3s ease-out;
     transform: scale(1.20, 1.20);
     filter: drop-shadow(9px 9px 1px rgba(0, 0, 0, 0.5));
 }
 
-#lol {
-    position: absolute;
-    padding-top: 18px;
-    border-radius: 14px;
-    width: 12%;
-    left: 77%;
-    background-color: #21dda2;
-    /* border: 1px solid orangered; */
-    box-shadow: 9px 2px 14px #21dda2;
-}
-
-#lol1 {
-    position: absolute;
-    padding-top: 20px;
-    border-radius: 14px;
-    width: 12%;
-    left: 72%;
-    top: 2.75%;
-    background-color: #d999d9;
-    /* border: 1px solid orangered; */
-    box-shadow: 9px 2px 14px #d999d9;
-
-
-}
-
-#lol2 {
-    position: absolute;
-    padding-top: 18px;
-    border-radius: 14px;
-    width: 12%;
-    top: 5.6%;
-    left: 67%;
-    /* border: 1px solid orangered; */
-    background-color: #4e7ace;
-    box-shadow: 9px 2px 14px #4e7ace;
-}
-
-#wall {
-    position: absolute;
-    height: 67px;
-    background-color: rgb(97, 96, 96);
-    top: 33.5%;
-    left: 36%;
-    width: 20%;
-    z-index: 0;
-    transform: rotate(-6deg);
-    transform-origin: 0;
-    transition: 1.4s;
-}
 
 @media only screen and (max-width: 475px) {
     .projects {
         grid-template-columns: 1fr;
     }
 
-    .project-item {
-        position: relative;
-        /* height: 200px;width: 125px !important; */
-        position: relative;
-    }
-
-    #desk-lamp {
-        left: -5%;
-        top: -1.6%;
-        height: 206px;
-        width: 141px;
-        transform: rotate(90deg);
-    }
-
-    #lol {
-        left: 86%;
-    }
-
-    #lol1 {
-        left: 48%;
-        top: 2.75%;
-    }
-
-    #lol2 {
-        top: 5.2%;
-        left: 66%;
-    }
 
     .project-item .item-title {
         left: 79%;
-        top: 42%;
-        font-size: 1.4em;
+        top: 82%!important;
+        font-size: 1.1em;
     }
 
     .menu-links {
