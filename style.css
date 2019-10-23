@@ -449,7 +449,7 @@ div#customtext {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    top: 16.4%;
+    top: 25.8%;
     color: white;
     font-size: 0.7em;
     letter-spacing: 1px;
@@ -470,6 +470,10 @@ div #customtext {
         top: 22.8% !important;
     }
 }
+
+/* @media only screen and (max-width: 768px) {
+ 
+} */
 
 #contactme{
     width: 80%;
