@@ -471,9 +471,13 @@ div #customtext {
     }
 }
 
-/* @media only screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
+
+    .projects{
+        width: 90%;
+    }
  
-} */
+}
 
 #contactme{
     width: 80%;
