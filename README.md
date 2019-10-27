@@ -1,2 +1,3 @@
-# no0neIO.github.io
-# test
+# One Line of Me
+This is the repo of my personal website onelineof.me
+You can find some of my projects here, with more coming soon. Please check back on a regular basis, for new and exciting apps.
