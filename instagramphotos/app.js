@@ -17,7 +17,9 @@ function getPhoto() {
             });
             console.log(res);
             document.getElementById("dl").href = profilePicHD;
-            document.getElementById("profImg").src = profilePicHD;
+            profimg=document.getElementById("profImg");
+            profimg.src = profilePicHD;
+            profimg.style.visibility = 'visible';
         });
     document.getElementById("url").value = "";
 }
