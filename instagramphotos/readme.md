@@ -7,6 +7,10 @@ Check it Live here [Instagram Photo Downloader](https://onelineof.me/instagramph
 
 **Instagram Photo Showcase/downloader** uses CSS Grid for the layout of the images.
 
+**No need for instagram access token/authorization** 
+- It uses a trick to take a JSON response back without an access token and then manipulate the data.
+- In the example below I use https://www.instagram.com/google/.
+
 **Next Steps**:
 
 - Better design.
