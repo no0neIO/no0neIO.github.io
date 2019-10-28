@@ -13,4 +13,4 @@ The pads are generated through javascript and for the layout it uses CSS Grid.
 
 **Screenshot**:
 
-![Alt text](screens/mpc.png?raw=true "Title")
+![MPC Sampler Simulator](../screens/mpc.png?raw=true "MPC")
