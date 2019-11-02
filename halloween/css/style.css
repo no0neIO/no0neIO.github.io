@@ -24,10 +24,10 @@
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    height: 74vh;   
+    height: 73vh;   
     color: white;
     font-family: main;
-    font-size: 5em;
+    font-size: 8em;
     letter-spacing: 2px;
     text-transform: uppercase;
     font-style: italic;
@@ -43,18 +43,21 @@
     font-family: Arial;
     color: white;
     text-align: center;
-    font-size:1.4em;
+    font-size:2.4em;
     font-weight: normal;
 }
 
 button{
+    height: 60px;
+    width: 200px;
     margin-top: 15px;
-    border-radius: 20px;
+    border-radius: 30px;
     padding: 10px 25px;
     color: white;
     background-color: red;
     font-style: italic;
     border: none;
+    font-size: 1.1em;
 }
 
 .oroi{
@@ -72,11 +75,11 @@ button:hover{
 .flex-grid {
     display: flex;
     background-color: #161615;
-    height: 100px;
+    height: 130px;
     justify-content: center;
     align-items: center;
     text-align: center;
-    
+    margin-top: -20px;
   }
   
 .col {
@@ -86,6 +89,7 @@ button:hover{
     align-items: center;
     padding: 15px;
     font-family: Arial;
+    padding-right: 150px;
   }
 
 .col .num{
@@ -128,8 +132,8 @@ button:hover{
     position: relative;
     left: 0;
     top: 0;
-    height: 190px;
-    width: 190px;
+    height: 300px;
+    width: 300px;
     padding-bottom: 60px;
     cursor: pointer;
 }
@@ -138,18 +142,18 @@ button:hover{
     position: relative;
     top: 0;
     left: 0;
-    height: 190px;
-    width: 190px;
+    height: 300px;
+    width: 300px;
     z-index: 2;
 }
 
  .play{
     position: absolute;
-    height: 70px;
-    width: 70px;
+    height: 150px;
+    width: 150px;
     margin: auto;
-    left: 95px;
-    top: 95px;
+    left: 150px;
+    top: 150px;
     transform: translate(-50%,-50%);
     text-align: center;
     z-index: 1;
@@ -216,6 +220,10 @@ button:hover{
       
 }
 
+    .col{
+        padding-right: 4px;
+    }
+
     .col .num{
         font-size: 0.9em;
         height: 30px;
@@ -227,4 +235,7 @@ button:hover{
         font-size: 0.5em;
     }
 
+    .flex-grid{
+        margin-top: 0;
+    }
 }
