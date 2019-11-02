@@ -9,7 +9,7 @@
 }
 
 .home{
-    background-image: url("/img/bg.gif");
+    background-image: url("../img/bg.gif");
     background-repeat: no-repeat;
     /* background-attachment: fixed; */
     background-position: center;
