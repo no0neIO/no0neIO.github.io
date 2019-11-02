@@ -101,8 +101,13 @@ button:hover{
     font-size: 0.7em;
 }
 
+.paixnidia span{
+    color: red;
+}
+
 .paixnidia h5{
     padding-bottom: 20px;
+    font-size: 1.1em;
 }
 
 .gridgames{
@@ -139,6 +144,7 @@ button:hover{
     transform: translate(-50%,-50%);
     text-align: center;
     z-index: 1;
+    
 } 
 
 .mainImg:hover {
@@ -150,6 +156,3 @@ button:hover{
     text-align: center;
 }
 
-.content{
-    color: blue;
-}
