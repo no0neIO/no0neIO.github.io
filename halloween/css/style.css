@@ -1,0 +1,155 @@
+@font-face{
+    font-family: main;
+    src:url("./fonts/Impact.ttf")
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.home{
+    background-image: url("/img/bg.gif");
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+    background-position: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.home h1{
+    /* position: relative; */
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 74vh;   
+    color: white;
+    font-family: main;
+    font-size: 5em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-style: italic;
+    font-weight: normal;
+    text-shadow: 3px 3px 2px black;
+}
+
+.home h1 span{
+    color: red;
+}
+
+.disclaimer{
+    font-family: Arial;
+    color: white;
+    text-align: center;
+    font-size:1.4em;
+    font-weight: normal;
+}
+
+button{
+    margin-top: 15px;
+    border-radius: 20px;
+    padding: 10px 25px;
+    color: white;
+    background-color: red;
+    font-style: italic;
+    border: none;
+}
+
+button:hover{
+    box-shadow: 0 0 10px white;
+    cursor: pointer;
+}
+
+.flex-grid {
+    display: flex;
+    background-color: #161615;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+  }
+  
+.col {
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    font-family: Arial;
+  }
+
+.col .num{
+    display: flex;
+    height: 50px;
+    width: 50px;
+    background-color: red;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    margin-right: 8px;
+    font-weight: bolder;
+    font-size: 1.5em;
+}
+
+.paixnidia{
+    padding: 60px 10px;
+    background-color: black;
+    color: white;
+    font-family: Tahoma;
+    font-weight: normal;
+    font-size: 0.7em;
+}
+
+.paixnidia h5{
+    padding-bottom: 20px;
+}
+
+.gridgames{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+}
+
+.game {
+    position: relative;
+    left: 0;
+    top: 0;
+    height: 190px;
+    width: 190px;
+    padding-bottom: 60px;
+    cursor: pointer;
+}
+
+.mainImg{
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 190px;
+    width: 190px;
+    z-index: 2;
+}
+
+ .play{
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    margin: auto;
+    left: 95px;
+    top: 95px;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    z-index: 1;
+} 
+
+.mainImg:hover {
+    z-index: 0;
+}
+
+
+.gameText{
+    text-align: center;
+}
+
+.content{
+    color: blue;
+}
