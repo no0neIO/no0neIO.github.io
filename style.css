@@ -359,7 +359,7 @@ width: 100px; */
 }
 
 .container .card .face {
-    width: 300px;
+    width: 350px;
     height: 200px;
     transition: 0.5s;
 }
@@ -373,6 +373,7 @@ width: 100px; */
     align-items: center;
     z-index: 1;
     transform: translateY(100px);
+    width: 350px;
 }
 
 .container .card:hover .face.face1 {
