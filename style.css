@@ -48,7 +48,7 @@ width: 100px; */
     font-family: monospace;
     font-size: 0.9em;
     font-weight: 400;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     transition: 0.18s ease-in;
     /* font-family: 'Black Ops One', cursive; */
     /* font-family: consolas; */
@@ -130,9 +130,10 @@ width: 100px; */
 
 .project-item {
     position: relative;
-    height: 250px;
+    height: 350px;
     /* border-radius: 80%; */
     width: auto;
+    width: 450px;
     /* border: 1px solid rgb(0, 0, 0); */
     background: #0ea0ff;
     color: #fff !important;
@@ -255,10 +256,10 @@ width: 100px; */
 
 
 .project-item:hover>img {
-    left:25%;
-    transform: translateX(-50%);
+    /* left:50%;
+    transform: translateX(-90%); */
     transition: 0.3s ease-out;
-    transform: scale(1.20, 1.20);
+    /* transform: scale(1.20, 1.20); */
     filter: drop-shadow(9px 9px 1px rgba(0, 0, 0, 0.5));
 }
 
