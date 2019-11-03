@@ -116,8 +116,8 @@ width: 100px; */
 
 .projects {
     display: grid;
-    width: 80%;
-    grid-template-columns: repeat(3, 1fr);
+    width: 90%;
+    grid-template-columns: repeat(4, 1fr);
     text-align: center;
     margin: auto;
     grid-gap: 25px;
@@ -130,10 +130,10 @@ width: 100px; */
 
 .project-item {
     position: relative;
-    height: 350px;
+    height: 250px;
     /* border-radius: 80%; */
     width: auto;
-    width: 450px;
+    width: 350px;
     /* border: 1px solid rgb(0, 0, 0); */
     background: #0ea0ff;
     color: #fff !important;
