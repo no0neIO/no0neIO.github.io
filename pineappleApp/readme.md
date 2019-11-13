@@ -11,4 +11,6 @@ The app gets the names and IDs of the first .JSON file, lists the names and make
 Then, when the user clicks a button to see more information, fetch is used again for the second .JSON, and with the help of the ID, it returns
 the right details to the user, inside of a lightbox.
 
-****Please note**: For the purposes of this live presentation, I have hosted the .JSON files here because of **mixed content** problems.(https vs http)
+****Please note**: For the purposes of this live version, I have hosted the .JSON files here because of **mixed content** issues.(https vs http)
+
+On the original solution, the .JSON files URLs are used as they should.
