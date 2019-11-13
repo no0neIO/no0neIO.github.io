@@ -1,8 +1,4 @@
-// const url = 'https://onelineof.me/pineappleApp/data/contacts.json';
-// const url2 = 'https://onelineof.me/pineappleApp/data/contact_methods.json';
-
-var proxyUrl = 'https://cors-anywhere.herokuapp.com/';
-
+const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
 const url = 'http://pineapple.com.gr/challenge/data/contacts.json';
 const url2 = 'http://pineapple.com.gr/challenge/data/contact_methods.json';
 

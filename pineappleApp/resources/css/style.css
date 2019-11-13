@@ -3,6 +3,14 @@
     margin: 0;
 }
 
+.logo img{
+    height: 150px;
+    width: 150px;
+    position: fixed;
+    left: 89%;
+    top: 2%;
+}
+
 html, body {
     max-width: 100%;
     overflow-x: hidden;
@@ -132,4 +140,7 @@ button:hover{
         font-size: 0.9em;
     }
 
+    .logo img{
+        display: none;
+    }
 }
