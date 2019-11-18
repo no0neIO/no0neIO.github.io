@@ -29,6 +29,8 @@ fetch(proxyUrl + url)
 
 
 const b = document.getElementsByClassName('grid2');
+const info = document.createElement("div");
+
 
 // prosthetw enan click listener se kathe button, pairnw to id pou exw thesei nwritera sto button kai to xrisimopoiw 
 // gia na vrw ta swsta info kai na ta prosthesa sto lightbox
@@ -39,9 +41,10 @@ b[0].addEventListener('click', function (e) {
             .then(resp => resp.json()
                 .then(data => {
                     let details = data[id];
+                    for (var key in details) {
+                        info.innerHTML += `${key}: ${details[key]}<br>`;
+                    }
                     lightbox.classList.add('active');
-                    const info = document.createElement("div");
-                    info.innerHTML = `Address: ${details.address} <br><br> Email: ${details.email} <br><br> Mobile: ${details.mobile}`;
                     lightbox.appendChild(info);
                 })
             )
@@ -58,5 +61,5 @@ document.body.appendChild(lightbox);
 lightbox.addEventListener("click", e => {
     if (e.target !== e.currentTarget) return;
     lightbox.classList.remove("active");
-    lightbox.innerHTML = "";
+    info.innerHTML = '';
 });
