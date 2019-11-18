@@ -3,6 +3,22 @@
     margin: 0;
 }
 
+.gh{
+    position: fixed;
+    left: 4%;
+    top: 2%;
+    font-family: 'Archivo', sans-serif;
+}
+
+.gh a{
+    text-decoration: none;
+    color: white;
+}
+
+.gh a:hover{
+    color: tomato;
+}
+
 .logo img{
     height: 150px;
     width: 150px;
@@ -143,5 +159,9 @@ button:hover{
 
     .logo img{
         display: none;
+    }
+
+    .gh a{
+        font-size: 0.6em;
     }
 }
