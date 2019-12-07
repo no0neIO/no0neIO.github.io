@@ -5,7 +5,7 @@ const fileContent = document.getElementById('fileContent')
 
 function loadBook(filename, displayName) {
     let currentBook = ""
-    let url = "/assets/scripts/" + filename
+    let url = "./assets/scripts/" + filename
     console.log(fn)
 
     // reset our UI
