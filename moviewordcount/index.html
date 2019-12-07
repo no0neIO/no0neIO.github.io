@@ -20,7 +20,7 @@
                 <div class="card mb-4">
                     <h2 class="card-header" id="fileName">Movie Title</h2>
                     <div class="card-body">
-                        <div class="display-box scroll-box">
+                        <div class="display-box scroll-box" id="fileContent">
                             Select a Movie on the right to see the script.
                         </div>
                     </div>
@@ -43,7 +43,7 @@
                             </span>
                         </div>
                     </div>
-                    <div class="card-footer" id="searchstat">
+                    <div class="card-footer" id="searchStat">
 
                     </div>
                 </div>
@@ -52,8 +52,19 @@
                 <div class="card my-4">
                     <h4 class="card-header">Select a Movie.</h4>
                     <div class="card-body">
-                        <div class="input-group">
-                            Select a Movie on the right to see the script.
+                        <div class="row">
+                            <div class="col-md-12">
+                                <ul class="list-unstyled mb-0">
+                                    <li><a href="#" onclick="loadBook('fightclub.txt','Fight Club')">Fight Club</a></li>
+                                    <li><a href="#" onclick="loadBook('joker.txt','Joker')">Joker</a></li>
+                                    <li><a href="#"
+                                            onclick="loadBook('thewolfofwallstreet.txt','The Wolf of Wall Street')">TheWolf
+                                            of
+                                            WallStreet</a></li>
+                                    <li><a href="#" onclick="loadBook('it.txt','It')">It</a></li>
+
+                                </ul>
+                            </div>
                         </div>
                     </div>
                     <div class="card-footer text-muted">
@@ -67,25 +78,50 @@
                     <h4 class="card-header">Most used words</h4>
                     <div class="card-body">
                         <div class="input-group">
-                            Select a Movie on the right to see the script.
+                            <ul class="list-unstyled mb-0" id="mostUsed">
+
+                            </ul>
                         </div>
                     </div>
                     <div class="card-footer text-muted">
                         <a href="https://onelineof.me">One Line of Me</a>
                     </div>
                 </div>
+
                 <hr>
+
                 <div class="card my-4">
                     <h4 class="card-header">Less used words</h4>
                     <div class="card-body">
                         <div class="input-group">
-                            Select a Movie on the right to see the script.
+                            <ul class="list-unstyled mb-0" id="lessUsed">
+
+                            </ul>
                         </div>
                     </div>
                     <div class="card-footer text-muted">
                         <a href="https://onelineof.me">One Line of Me</a>
                     </div>
                 </div>
+
+                <hr>
+
+                <div class="card my-4">
+                    <h4 class="card-header">Stats</h4>
+                    <div class="card-body">
+                        <div class="input-group">
+                            <ul class="list-unstyled mb-0" id="stats">
+                                <li id="docLenght"></li>
+                                <li id="wordCount"></li>
+                                <li id="charCount"></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card-footer text-muted">
+                        <a href="https://onelineof.me">One Line of Me</a>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
@@ -101,6 +137,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+    <script src="./assets/app.js"></script>
 </body>
 
 </html>
