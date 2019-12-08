@@ -10,10 +10,13 @@
 
 <body>
     <iframe src="data:text/html,
-    This iframe vibrates sos.
+    This iframe vibrates once a second.
     <script>
-        window.navigator.vibrate([100, 30, 100, 30, 100, 30, 200, 30, 200, 30, 200, 30, 100, 30, 100, 30, 100]);
-     </script>"></iframe>
+      window.setInterval(function() {
+        navigator.vibrate(200);
+      }, 1000);
+     </script>
+"></iframe>
 </body>
 
 </html>
