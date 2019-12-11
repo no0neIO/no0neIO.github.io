@@ -146,6 +146,11 @@ width: 100px; */
     filter: brightness(150%);
 }
 
+.item-6:hover {
+    cursor: pointer;
+    filter: brightness(115%);
+}
+
 .project-item {
     display: flex;
     align-items: center;
@@ -179,6 +184,15 @@ width: 100px; */
     top: 90%;
     left: 50%;
     transform: translateX(-50%);
+}
+
+.item-6 {
+    background-color: rgb(231, 140, 55);
+}
+
+.item-6 img{
+    height: 120px;
+    width: 180px;
 }
 
 .item-0 {
