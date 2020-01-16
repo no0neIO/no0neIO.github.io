@@ -64,6 +64,10 @@
         max-width: inherit;
         margin:2rem 0;
     }
+
+    .main-footer{
+        font-size: 0.8rem;
+    }
 }
 
 .join-page-circle-1{
