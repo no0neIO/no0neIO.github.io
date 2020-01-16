@@ -163,6 +163,7 @@ body{
 
 #splash.fade{
     opacity: 0;
+    display: none;
 }
 
 
