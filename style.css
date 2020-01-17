@@ -186,9 +186,18 @@ width: 100px; */
     transform: translateX(-50%);
 }
 
+.item-8 {
+    background-color: #cc0000;
+}
+
+.item-8 img{
+    width: 240px;
+}
+
 .item-7 {
     background-color: rgb(87, 95, 156);
 }
+
 
 
 .item-6 {
