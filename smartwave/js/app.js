@@ -19,7 +19,7 @@ searchText.keyup(function () {
 function doneTyping() {
     resultsList.empty(); // katharise ta proigoumena results
     let keywords = searchText.val();
-    const url = 'http://northwind.netcore.io/customers.json';
+    const url = 'https://onelineof.me/smartwave/customers.json';
     resultsList.show();
     $.ajax({
         type: 'GET',
