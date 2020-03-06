@@ -24,14 +24,7 @@ function doneTyping() {
     $.ajax({
         type: 'GET',
         url: url,
-        data: { //ES6 object property name = value by default
-            keywords,
-        },
         success: data => successFunc(data, keywords),
-        // error: function (xhr, ajaxOptions, thrownError) {
-        //     alert(xhr.status);
-        //     alert(thrownError);
-        // }
         statusCode: {
             400: function () {
                 alert('Errors in specified keywords and/or language.');
@@ -44,25 +37,13 @@ function doneTyping() {
 }
 
 
-// function successFunc(data, keywords) {
-//     data = data.customers
-//     data.map(x => {
-//         // console.log(x.contactName);
-//         if (x.contactName.toUpperCase().includes(keywords.toUpperCase()))
-//             resultsList.append(`<div class="result" onclick="">${x.contactName}</div>`);
-//         else
-//             resultsList.append(`<div class="result">No Results Found.</div>`);
-//     })
-// }
-
-
 function successFunc(data, keywords) {
-    // console.log(keywords);
-    // console.log(data.customers);
     keywords = keywords.toUpperCase()
     $.each(data.customers, (index, item) => {
         let name = item.contactName.toUpperCase()
-        if (name.startsWith(keywords))
+        let firstName = name.split(' ').slice(0, -1).join(' ');
+        let lastName = name.split(' ').slice(-1).join(' ');
+        if (firstName.startsWith(keywords) || lastName.startsWith(keywords))
             resultsList.append(`
             <div class="result">
                 <div class="result-name">${item.contactName}</div>
